@@ -40,26 +40,89 @@ p {
     margin: 0;
 }
 
+.hero {
+    background-color: rgba(0, 0, 155, .1);
+    height: 20rem;
+}
+
 .container {
     display: flex;
 }
 
-.title {
+.title > h1 {
     color: rgba(0, 0, 0, .59);
     font-size: 2em;
     font-weight: 300;
     text-transform: capitalize;
 }
-.menu {
+
+.title {
     padding: 2em 4em;
+    width: 20em;
     background-color: rgba(0,0,155, .1)
 }
 
-.wrapper {
+.content {
     display: flex;
 }
 
-.col {
+.content > div {
     width: 35em;
     padding: 2em;
+}
+
+/* Color */
+
+.color {
+    width: 10em;
+    height: 10em;
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+}
+
+.black-59 {
+    background-color: rgba(0, 0, 0, .59);
+}
+
+.black-100 {
+    background-color: #000;
+}
+
+.primary-light {
+    background-color: #ff5a36;
+}
+
+.primary-color {
+    background-color: #ff0000;
+}
+
+.primary-dark {
+    background-color: #c20000;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    padding: .4em 2em;
+    font-size: 2em;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #ff0000;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary {
+
+}
+
+.btn-secondary {
+
+}
+
+.btn-cta {
+
 }
