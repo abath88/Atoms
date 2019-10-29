@@ -71,6 +71,10 @@ p {
     padding: 2em;
 }
 
+.content > .buttons {
+    width: 100%;
+}
+
 /* Color */
 
 .color {
@@ -105,24 +109,43 @@ p {
 
 /* BUTTONS */
 
-.btn {
-    padding: .4em 2em;
-    font-size: 2em;
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: #ff0000;
-    color: white;
-    font-weight: 600;
+.btn { /* default - domyślny */
+    padding: .6em 1em;
+    font-size: 1.6em;
+    border: 1px solid rgba(0,0,0,.39);
+    border-radius: 4px;
+    color: rgba(0,0,0,.79);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(0,0,0,.1);
+    border-color: #000;
 }
 
 .btn-primary {
-
+    border-color: blue;
+    background-color: rgb(51, 122, 183);
+    color: white;
 }
 
-.btn-secondary {
-
+.btn-primary:hover {
+    background-color: rgb(30, 78, 121);
+    border-color: rgb(0, 0, 73);
 }
 
 .btn-cta {
+    border-color:#ff0000;
+    background-color: #ff5a36;
+    color: white;
+}
 
+.btn-cta:hover {
+    border-color:#6e0000;
+    background-color: #b83b1e;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
