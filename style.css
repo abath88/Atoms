@@ -63,6 +63,7 @@ p {
 }
 
 .content {
+    position: relative;
     display: flex;
 }
 
@@ -220,4 +221,205 @@ form {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.container_checkbox {
+    position: relative;
+    height: 20px;
+    width: 20px;
+
+    background-color: #fff;
+    border: 1px solid #000;
+
+    cursor: pointer;
+}
+
+.container_checkbox input {
+    position: absolute;
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.container_checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* INPUT:RADIO */
+.container_radio {
+    position: relative;
+    height: 20px;
+    width: 20px;
+
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.container_radio input {
+    position: absolute;
+    opacity: 0;
+    height: 21px;
+    width: 21px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.checkmark_radio:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    display: none;
+}
+
+.container_radio input:checked ~ .checkmark_radio:after {
+    display: block;
+}
+/* END INPUT:RADIO */
+
+
+.btn_check {
+
+}
+
+.btn_check input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 10;
+}   
+
+
+
+.btn_checkmark:after {
+    content: "";
+    position: relative;
+    top: -2px;
+    left: -3px;
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+
+.btn_check input:checked ~ .btn_checkmark:after {
+    display: inline-block;
+}
+
+.switch {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    
+}
+
+.switch input {
+    position: absolute;
+    width: 300px;
+    height: 30px; 
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.switchbox {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: #999;
+    border-radius: 50px;
+    width: 30px;
+    height: 15px;
+    
+}
+
+.switchbox::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    box-shadow: 
+        -1px 3px 3px rgba(0, 0, 0, .25), 
+        -1px 1px 1px rgba(0, 0, 0, .22);
+
+    transition: all 280ms ease-in-out;
+}
+
+.switch input:checked ~ .switchbox::before {
+    left: 12px;
+    background-color: rgb(3, 149, 136);
+    border-color: rgb(3, 149, 136);
+}
+
+.switch input:checked ~ .switchbox {
+    background-color: rgb(110, 189, 183);
+}
+
+
+.container > .container_checkbox {
+    margin: 1em;
+}
+.container > .container_radio {
+    margin: 1em;
+}
+
+.container_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_text > input {
+    margin: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+}
+.form > div {
+    margin-right: 5em;
 }
